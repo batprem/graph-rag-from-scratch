@@ -1,0 +1,36 @@
+[project]
+name = "test-graph-rag"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["prem <prem.ch@ku.th>"]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "osx-64"]
+
+[tasks]
+notebook = "jupyter notebook"
+
+[dependencies]
+python = "3.11.*"
+jupyter = ">=1.0.0,<1.1"
+notebook = "<7"
+black = ">=24.4.2,<24.5"
+pip = ">=24.0,<25"
+
+[pypi-dependencies]
+ollama = "*"
+llama-index = "*"
+nebula3-python = "*"
+networkx = "*"
+pyvis = "*"
+numpy = "*"
+pandas = "*"
+llama-index-graph-stores-nebula = "*"
+ipython-ngql = "*"
+llama-index-readers-wikipedia = "*"
+llama-index-llms-ollama = "*"
+llama-index-embeddings-ollama = "*"
+wikipedia = "*"
+retry = "*"
+
+[target.osx-64.pypi-dependencies]
+ipython-ngql = "*"
